@@ -2,6 +2,11 @@ import React, { useContext, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from '../../AuthContext';
 import { Link } from "react-router-dom";
+import Card from '@mui/material/Card';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import './Login.css'
 
 const Login = props => {
   const context = useContext(AuthContext);
@@ -23,20 +28,39 @@ const Login = props => {
   }
 
   return (
-    <>
-      <h2>Login page</h2>
-      <p>You must log in to view the protected pages </p>
-      <input id="username" placeholder="user name" onChange={e => {
-        setUserName(e.target.value);
-      }}></input><br />
-      <input id="password" type="password" placeholder="password" onChange={e => {
-        setPassword(e.target.value);
-      }}></input><br />
-      {/* Login web form  */}
-      <button onClick={login}>Log in</button>
-      <p>Not Registered?
-      <Link to="/signup">Sign Up!</Link></p>
-    </>
+<div className="login">
+<Card sx={{ maxWidth: 345 }}>
+  <Typography gutterBottom variant="h5" component="div" className="cardTitle">
+    TMDB Client
+  </Typography>
+  <form className="form">
+    <TextField type="text"
+      className="register__textBox"
+      placeholder="Username"
+      value={userName}
+      onChange={e => {
+        setUserName(e.target.value)
+      }
+      }
+      variant="standard" />
+    <br />
+    <TextField type="password"
+      className="register__textBox"
+      placeholder="Password"
+      onChange={e => {
+        setPassword(e.target.value)
+      }
+      }
+      variant="standard" />
+    <br />
+    <Button className="login__btn" onClick={login} variant="outlined">Login</Button>
+    <br />
+    <Typography variant="p" color="text.secondary">
+      Don't have an account? <Link to="/register">Register</Link> now.
+    </Typography>
+  </form>
+</Card>
+</div>
   );
 };
 
