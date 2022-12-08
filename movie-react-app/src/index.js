@@ -22,7 +22,7 @@ import { createRoot } from "react-dom/client";
 import MoviesContextProvider from "./contexts/moviesContext";
 
 import AuthProvider from "./AuthContext";
-import AuthHeader from "./authHeader";
+import MovieProvider from "./moviesContext";
 import ProtectedRoutes from "./protectedRoutes";
 
 const queryClient = new QueryClient({
@@ -42,6 +42,7 @@ const App = () => {
     <BrowserRouter>
     <AuthProvider>
     <MoviesContextProvider>
+    <MovieProvider>
     <Routes>
       
     <Route element={<ProtectedRoutes />}>
@@ -66,6 +67,7 @@ const App = () => {
       <Route exact path="/reset" element={<Reset />} />
 
     </Routes>
+    </MovieProvider>
     </MoviesContextProvider>
     </AuthProvider>
   </BrowserRouter>
