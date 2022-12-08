@@ -92,3 +92,33 @@ export const getMovies = () => {
         console.log(error);
     });
   };
+
+  export const getAllShows = () => {
+    return fetch(
+       '/api/shows', {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };
+
+  export const getShow = (args) => {
+    const [, idPart] = args.queryKey;
+    const { id } = idPart;
+    return fetch(
+        `/api/shows/${id}`, {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };

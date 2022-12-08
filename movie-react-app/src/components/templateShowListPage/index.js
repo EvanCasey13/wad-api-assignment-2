@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext  } from "react";
 import Header from "../headerMovieList";
 import FilterCard from "../filterShowCard";
 import ShowList from "../showList";
 import Grid from "@mui/material/Grid";
+import { ShowsContext } from "../../showsContext";
 
 function ShowListPageTemplate({ shows, name, action }) {
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
   const genreId = Number(genreFilter);
+  const context = useContext(ShowsContext);
 
-  let displayedShows = shows
+  let displayedShows = context.shows
     ?.filter((s) => {
       return s.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
     })

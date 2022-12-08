@@ -22,7 +22,8 @@ import { createRoot } from "react-dom/client";
 import MoviesContextProvider from "./contexts/moviesContext";
 
 import AuthProvider from "./AuthContext";
-import ActorProvider from "./actorsContext"
+import ActorProvider from "./actorsContext";
+import ShowProvider from "./showsContext";
 import MovieProvider from "./moviesContext";
 import ProtectedRoutes from "./protectedRoutes";
 
@@ -45,6 +46,7 @@ const App = () => {
     <MoviesContextProvider>
     <MovieProvider>
     <ActorProvider>
+    <ShowProvider>
     <Routes>
     <Route element={<ProtectedRoutes />}>
     <Route path="/shows/popular" element={<TvPopularPage />} />
@@ -68,6 +70,7 @@ const App = () => {
       <Route exact path="/reset" element={<Reset />} />
 
     </Routes>
+    </ShowProvider>
     </ActorProvider>
     </MovieProvider>
     </MoviesContextProvider>

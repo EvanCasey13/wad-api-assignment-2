@@ -1,6 +1,5 @@
-import React, { useState, useContext } from "react";
-import AuthContext from "../AuthContext";
-import { useParams, Navigate } from 'react-router-dom';
+import React from "react";
+import { useParams } from 'react-router-dom';
 import ActorDetails from "../components/actorDetails";
 import PageTemplate from "../components/templateActorPage";
 import { getActor } from '../api/movie-api'

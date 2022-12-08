@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
-import AuthContext from "../AuthContext";
-import { useParams, Navigate } from 'react-router-dom';
+import React from "react";
+import { useParams } from 'react-router-dom';
 import ShowDetails from "../components/showDetails/";
 import PageTemplate from "../components/templateShowPage";
-import { getShow } from '../api/tmdb-api'
+import { getShow } from '../api/movie-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 import SiteHeader from './../components/siteHeader'
@@ -11,7 +10,7 @@ import SiteHeader from './../components/siteHeader'
 const ShowPage = (props) => {
   const { id } = useParams();
   const { data: show, error, isLoading, isError } = useQuery(
-    ["show", { id: id }],
+    ["show", { id }],
     getShow
   );
 
