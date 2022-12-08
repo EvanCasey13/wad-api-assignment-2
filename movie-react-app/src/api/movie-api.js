@@ -19,8 +19,25 @@ export const signup = (username, password) => {
 };
 
 export const getMovies = () => {
+    
     return fetch(
        '/api/movies', {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };
+
+  export const getMovie = (args) => {
+    const [, idPart] = args.queryKey;
+    const { id } = idPart;
+    return fetch(
+        `/api/movies/${id}`, {
             headers: {
                 'Authorization': window.localStorage.getItem('token')
             }

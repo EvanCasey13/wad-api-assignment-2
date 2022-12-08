@@ -3,7 +3,7 @@ import Movie from "../movieCard";
 import Grid from "@mui/material/Grid";
 import { MoviesContext } from "../../moviesContext";
 
-const MovieList = ( {movies, action }) => {
+const MovieList = ( { action }) => {
   const context = useContext(MoviesContext);
     let movieCards = context.movies?.map((m) => (
     <Grid key={m.id} item xs={12} sm={6} md={4} lg={3} xl={2}>

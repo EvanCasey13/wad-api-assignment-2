@@ -8,33 +8,32 @@ const HomePage = (props) => {
   const context = useContext(MoviesContext);
   let movies = "";
 
-  if (context.movies){
+  if (context.movies) {
     movies = (
-        <div>
-            {context.movies.map(movie => { return <>{movie.id},{movie.title}<br /></> })}
-        </div>
+      <div>
+        {context.movies.map(movie => { return <>{movie.id},{movie.title}<br /></> })}
+      </div>
     )
-}
-else {
+  }
+  else {
     movies = (
-        <div>
-            Movies are loading
-        </div>
+      <div>
+        Movies are loading
+      </div>
     )
-}
+  }
 
   return (
     <div className="homepage">
-<SiteHeader />
-    <PageTemplate
-      title="Discover Movies"
-      movies={movies}
-      action={(movie) => {
-        return <AddToFavoritesIcon movie={movie} />
-      }}
-    />
-  </div>
-);
-
+      <SiteHeader />
+      <PageTemplate
+        title="Discover Movies"
+        movies={movies}
+        action={(movie) => {
+          return <AddToFavoritesIcon movie={movie} />
+        }}
+      />
+    </div>
+  );
 };
 export default HomePage;
