@@ -7,7 +7,7 @@ import SiteHeader from './../components/siteHeader'
 const HomePage = (props) => {
   const context = useContext(MoviesContext);
   let movies = "";
-
+  
   if (context.movies) {
     movies = (
       <div>

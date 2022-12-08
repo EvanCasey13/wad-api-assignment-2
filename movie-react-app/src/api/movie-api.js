@@ -19,9 +19,22 @@ export const signup = (username, password) => {
 };
 
 export const getMovies = () => {
-    
     return fetch(
        '/api/movies', {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };
+
+  export const getGenres = () => {
+    return fetch(
+       '/api/genres', {
             headers: {
                 'Authorization': window.localStorage.getItem('token')
             }
@@ -38,6 +51,21 @@ export const getMovies = () => {
     const { id } = idPart;
     return fetch(
         `/api/movies/${id}`, {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };
+
+  
+  export const getAllActors = () => {
+    return fetch(
+       '/api/actors', {
             headers: {
                 'Authorization': window.localStorage.getItem('token')
             }

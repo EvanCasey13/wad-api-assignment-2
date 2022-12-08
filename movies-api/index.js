@@ -3,6 +3,7 @@ import express from 'express';
 import moviesRouter from './api/movies';
 import genresRouter from './api/genres';
 import usersRouter from './api/users';
+import actorsRouter from './api/actors'
 import session from 'express-session';
 import passport from './authenticate';
 import './seedData'
@@ -32,6 +33,8 @@ app.use('/api/movies', passport.authenticate('jwt', {session: false}), moviesRou
 app.use('/api/movies/:id', passport.authenticate('jwt', {session: false}), moviesRouter);
 
 app.use('/api/genres', genresRouter);
+
+app.use('/api/actors', passport.authenticate('jwt', {session: false}), actorsRouter);
 
 app.use('/api/users', usersRouter);
 
