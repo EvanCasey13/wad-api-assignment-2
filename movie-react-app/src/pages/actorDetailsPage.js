@@ -3,7 +3,7 @@ import AuthContext from "../AuthContext";
 import { useParams, Navigate } from 'react-router-dom';
 import ActorDetails from "../components/actorDetails";
 import PageTemplate from "../components/templateActorPage";
-import { getActor } from '../api/tmdb-api'
+import { getActor } from '../api/movie-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
 import SiteHeader from './../components/siteHeader'
@@ -11,7 +11,7 @@ import SiteHeader from './../components/siteHeader'
 const ActorPage = (props) => {
   const { id } = useParams();
   const { data: actor, error, isLoading, isError } = useQuery(
-    ["actor", { id: id }],
+    ["actor", { id }],
     getActor
   );
 

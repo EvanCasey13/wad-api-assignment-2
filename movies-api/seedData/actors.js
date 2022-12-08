@@ -1,4 +1,4 @@
-const actors= [
+const actors = [
     {
         "adult": false,
         "gender": 1,
@@ -66,6 +66,9 @@ const actors= [
                 "vote_count": 1895
             }
         ],
+        "biography": "Jenna Marie Ortega (born September 27, 2002) is an American actress. She began her career as a child actor, with roles in films such as Insidious: Chapter 2 (2013), Iron Man 3 (2013) and The Little Rascals Save the Day (2014). She received recognition for her role as Young Jane on The CW comedy-drama series Jane the Virgin (2014–2019), and had her breakthrough for starring as Harley Diaz on the Disney Channel series Stuck in the Middle (2016–2018), which won her the Imagen Award for Best Young Actor on Television in 2018, and voicing Princess Isabel on the Disney Channel animated series Elena of Avalor (2016–2020).\n\nOrtega began making her transition to mainstream film and television starring as Ellie Alves on the Netflix thriller series You (2018–present), and subsequently starred in the Netflix films The Babysitter: Killer Queen (2020) and Yes Day (2021) and the horror films Studio 666 and X (both 2022). She received critical acclaim for her role as Vada in the drama The Fallout (2022), which is considered her breakout film performance. Her highest-grossing film came with the role of Tara Carpenter in the slasher-blockbuster film Scream (2022). She currently voices Brooklyn on the Netflix animated series Jurassic World Camp Cretaceous (2020–present).\n\nDescription above from the Wikipedia article Jenna Ortega, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+        "birthday": "2002-09-27",
+        "place_of_birth": "Coachella Valley, Palm Desert, California, USA",
         "known_for_department": "Acting",
         "name": "Jenna Ortega",
         "popularity": 482.765,
@@ -138,6 +141,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Hunter Doohan is an American film and television actor and writer.",
+        "birthday": "1994-01-19",
+        "place_of_birth": "Fort Smith, Arkansas, USA",
         "name": "Hunter Doohan",
         "popularity": 265.025,
         "profile_path": "/1rFocgirwZziZguJHYEGHqhVpdE.jpg"
@@ -206,6 +212,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "The play started with a child actor, and he belonged to the drama club even in high school. Started full-scale actor business at the age of 27. He has a well-trained body and many villains have a strong image, but he is also good at comical roles. He is learning Japanese and aiming for activities in Japan. Major appearances include \"Forbidden Sex\", \"Yongjugol\", and \"Studio 2.0\"",
+        "birthday": "1983-05-04",
+        "place_of_birth": "Seoul, South Korea",
         "name": "Min Do-yoon",
         "popularity": 261.929,
         "profile_path": "/bHHn3krbHyxQIWb4JbHkPlV6Uu1.jpg"
@@ -279,6 +288,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Christina Ricci is an American actress. She is known for playing unconventional characters with a dark edge. Ricci is the recipient of several accolades, including a National Board of Review Award for Best Supporting Actress and a Satellite Award for Best Actress, as well as Golden Globe, Primetime Emmy, Screen Actors Guild, and Independent Spirit Award nominations.\n\nRicci made her film debut at the age of nine in Mermaids (1990), which was followed by a breakout role as Wednesday Addams in The Addams Family (1991) and its sequel. Subsequent appearances in Casper and Now and Then (both 1995) brought her fame as a \"teen icon\". At 17, she moved into adult-oriented roles with The Ice Storm (1997), which led to parts in films such as Buffalo '66, Pecker and The Opposite of Sex (all 1998). She garnered acclaim for her performances in Sleepy Hollow (1999) and Monster (2003). Her other credits include Fear and Loathing in Las Vegas (1998), Prozac Nation (2001), Pumpkin (2002), Anything Else (2003), Black Snake Moan (2006), Speed Racer (2008), and The Smurfs 2 (2013). Despite being known predominantly for her work in independent productions, Ricci has appeared in numerous box office hits – to date, her films have grossed in excess of US$1.4 billion.\n\nOn television, Ricci appeared as Liza Bump in the final season of Ally McBeal (2002), and received acclaim for her guest role on Grey's Anatomy in 2006. She also starred as Maggie Ryan on the ABC series Pan Am (2011–12), and produced and starred in the series The Lizzie Borden Chronicles (2015) and Z: The Beginning of Everything (2017). As well as voicing characters in several animated films, Ricci provided voices for the video games The Legend of Spyro: Dawn of the Dragon and Speed Racer: The Videogame (both 2008). In 2010, she made her Broadway debut in Time Stands Still.",
+        "birthday": "1980-02-12",
+        "place_of_birth": "Santa Monica, California, USA",
         "name": "Christina Ricci",
         "popularity": 173.533,
         "profile_path": "/m2cY5Er1loPgHkZYdFMEz6YeiwG.jpg"
@@ -352,6 +364,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Gwendoline Christie (born 28 October 1978) is an English actress and model. She is known for portraying the warrior Brienne of Tarth in the HBO fantasy-drama series Game of Thrones. In film, Christie started with minor roles in the Terry Gilliam films The Imaginarium of Doctor Parnassus and The Zero Theorem, and played Captain Phasma in Star Wars: The Force Awakens.",
+        "birthday": "1978-10-28",
+        "place_of_birth": "Worthing, West Sussex, England",
         "name": "Gwendoline Christie",
         "popularity": 163.473,
         "profile_path": "/kmlv5i02n3zKryBr2W3kSeWVKTD.jpg"
@@ -424,6 +439,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "William Joseph Devane (born September 5, 1937) is an American film, television and theater actor,  known for his role as Greg Sumner on the primetime soap opera Knots Landing and as James Heller on the Fox serial drama 24, the role he reprised in Live Another Day. He is also known for his supporting roles in films such as McCabe & Mrs. Miller,  Family Plot), Marathon Man, Rolling Thunder and Space Cowboys.\n\nDevane began his acting career with the New York Shakespeare Festival where he performed in 15 plays. In 1966, Devane portrayed Robert F. Kennedy in the Off-Broadway spoof MacBird. He gained acclaim for his role as President John F. Kennedy in a television docudrama about the Cuban Missile Crisis, The Missiles of October, and again when he played blacklisted radio personality John Henry Faulk in the Emmy Award-winning TV movie Fear on Trial. He is widely known for his ten years as the ambitious and hardnosed politician-turned-corporate titan Greg Sumner on Knots Landing.\n\nIn 1994, Devane appeared as Al Capone in Lois & Clark: The New Adventures of Superman in an episode entitled \"That Old Gang of Mine\". He also had a recurring role on the CBS show Early Edition as the lead character's father. Devane appeared in the films McCabe & Mrs. Miller; Lady Liberty; Family Plot; Marathon Man; Rolling Thunder; Yanks; Testament; Timestalkers; Forgotten Sins; Exception to the Rule; Payback; Hollow Man and Space Cowboys.\n\nDevane has played members of the Presidential Cabinet on two evening dramas. In 2004, on The West Wing, he guest-starred as the Secretary of State and potential Vice-Presidential nominee. Devane appeared in several scenes with Martin Sheen; they also appeared together as President John F. Kennedy and his brother Robert, respectively, 30 years earlier in The Missiles of October. In 2005, he joined the cast of 24 as Secretary of Defense James Heller for seasons 4, 5 and 6.",
+        "birthday": "1939-09-05",
+        "place_of_birth": "Albany, New York, USA",
         "name": "William Devane",
         "popularity": 163.005,
         "profile_path": "/7MGLsJXn3URkYeZzqzAcgpYXFum.jpg"
@@ -495,6 +513,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "",
+        "birthday": "2002-04-02",
+        "place_of_birth": null,
         "name": "Emma Myers",
         "popularity": 160.776,
         "profile_path": "/8iAcjRrE7EidH3QoxjsRB1PxJMC.jpg"
@@ -564,6 +585,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Cole Kenneth Hauser (born March 22, 1975) is an American film and television actor best known for his roles in School Ties, Good Will Hunting and 2 Fast 2 Furious. ",
+        "birthday": "1975-03-22",
+        "place_of_birth": "Santa Barbara, California, USA",
         "name": "Cole Hauser",
         "popularity": 153.771,
         "profile_path": "/kJyUtNZREd7mes21OrWiCtOugPL.jpg"
@@ -612,6 +636,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Julie Peters is an actress, known for Willow (1988), Prince Caspian and the Voyage of the Dawn Treader (1989) and Road to Nowhere (1993)",
+        "birthday": null,
+        "place_of_birth": null,
         "name": "Julie Peters",
         "popularity": 142.267,
         "profile_path": null
@@ -686,6 +713,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Percy Hynes White is a Canadian film and television actor from St John’s, Newfoundland.",
+        "birthday": "2001-10-08",
+        "place_of_birth": "St. John's, Newfoundland, Canada",
         "name": "Percy Hynes White",
         "popularity": 129.111,
         "profile_path": "/hOS1vYWvTTXugOWhAGXoBH7dGHN.jpg"
@@ -755,6 +785,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Kelly Reilly (born 18 July 1977) is an English actress. Reilly's performance in After Miss Julie at the Donmar Warehouse made her a star of the London stage and earned her a nomination for a Laurence Olivier Theatre Award for Best Actress of 2003. Aged 26, she's the youngest person ever nominated for that award. And, in 2005, she won Best Newcomer Award at the Cannes Film Festival for her role as Wendy in The Russian Dolls (Les Poupées Russes).",
+        "birthday": "1977-07-18",
+        "place_of_birth": "Surrey, England, UK",
         "name": "Kelly Reilly",
         "popularity": 116.707,
         "profile_path": "/gof8bWW9E7MH30GpvA97PwGiIuu.jpg"
@@ -826,6 +859,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Joy Sunday is an actress and filmmaker.",
+        "birthday": "1995-04-17",
+        "place_of_birth": "Staten Island, New York, USA",
         "name": "Joy Sunday",
         "popularity": 110.179,
         "profile_path": "/fTajkqbVGMU4O2LMteuYlffhfJI.jpg"
@@ -895,6 +931,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Joey Lynn King (born July 30, 1999) is an American actress. She first gained recognition for portraying Ramona Quimby in the comedy film Ramona and Beezus (2010) and has since gained wider recognition for her lead role in The Kissing Booth (2018) and its two sequels. King received critical acclaim for her starring role in the crime drama series The Act (2019), for which she was nominated for both a Primetime Emmy Award and a Golden Globe Award. In 2022 she played the titular role of The Princess in Disney's The Princess (movie).\n\nKing has also appeared in the films Battle: Los Angeles (2011), Crazy, Stupid, Love (2011), The Dark Knight Rises (2012), The Conjuring (2013), White House Down (2013), Independence Day: Resurgence (2016), Bullet Train (2022) and The Princess (2022), as well as the first season of the FX black comedy crime drama series Fargo.",
+        "birthday": "1999-07-30",
+        "place_of_birth": "Los Angeles, California, USA",
         "name": "Joey King",
         "popularity": 106.438,
         "profile_path": "/kL0lWLJA6lbvmPM3YL0ISE6rVr6.jpg"
@@ -967,6 +1006,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Thomas \"Tom\" Stanley Holland is an English actor and dancer.\n\nHe is best known for playing Peter Parker / Spider-Man in the Marvel Cinematic Universe and has appeared as the character in six films: Captain America: Civil War (2016), Spider-Man: Homecoming (2017), Avengers: Infinity War (2018), Avengers: Endgame (2019), Spider-Man: Far From Home (2019), and Spider-Man: No Way Home (2021).\n\nHe is also known for playing the title role in Billy Elliot the Musical at the Victoria Palace Theatre, London, as well as for starring in the 2012 film The Impossible.",
+        "birthday": "1996-06-01",
+        "place_of_birth": "Surrey, England, UK",
         "name": "Tom Holland",
         "popularity": 103.152,
         "profile_path": "/bBRlrpJm9XkNSg0YT5LCaxqoFMX.jpg"
@@ -1037,6 +1079,9 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Riki Lindhome was born on March 5, 1979 in Coudersport, Pennsylvania but grew up primarily in Portville, New York (near Buffalo). Her first break came when Tim Robbins cast her in his hit play, Embedded, which played at the Public Theater in New York City, Riverside Studios in London and The Actor's Gang Theater in Los Angeles. Shortly after, Clint Eastwood cast her in her first film role, as Mardell Fitzgerald in Million Dollar Baby. She also wrote and directed the award-winning short, Life is Short. Since then, she has found work in film, TV and commercials and performs in the LA-based comedy duo, Garfunkel and Oates.",
+        "birthday": "1979-03-05",
+        "place_of_birth": "Coudersport, Pennsylvania, USA",
         "name": "Riki Lindhome",
         "popularity": 92.917,
         "profile_path": "/kJAGFp0ZW5sY0NoysFZcfSRykZa.jpg"
@@ -1104,6 +1149,9 @@ const actors= [
         ],
         "known_for_department": "Acting",
         "name": "AJ Raval",
+        "biography": "AJ Raval is a Filipino actress, YouTuber, and social media star. Having the genes of such talented parents, AJ also sparked interest in the business. She has considered an upcoming star and has high expectations given her famous family. Before becoming an actress, AJ was a member of a girl group called The Fabulous Girlfriends when she was only 15 years old. She has starred in several movies under Viva Films and appeared in the first‑ever Philippine longest-running drama of all time \"Ang Probinsyano.\"",
+        "birthday": "2000-09-03",
+        "place_of_birth": "Manila, Philippines",
         "popularity": 92.724,
         "profile_path": "/2JMxcjkUc5SPrj8P9GCFQev4pbm.jpg"
     },
@@ -1172,7 +1220,10 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Chloë Grace Moretz is an American actress. She began acting as a child, with early roles in the supernatural horror film The Amityville Horror (2005), the drama series Desperate Housewives (2006–07), the supernatural horror film The Eye (2008), the drama film The Poker House (2008), the drama series Dirty Sexy Money (2007–08), the romantic comedy film 500 Days of Summer (2009) and the children's comedy film Diary of a Wimpy Kid (2010).\n\nHer breakthrough came in 2010 with her critically acclaimed performances as Hit-Girl in the superhero film Kick-Ass and as a child vampire in the horror film Let Me In.\n\nMoretz starred in Martin Scorsese's historical adventure film Hugo (2011), Tim Burton's horror comedy film Dark Shadows (2012), the satirical sitcom 30 Rock (2011-2013), reprised her role as Hit-Girl in Kick-Ass 2 (2013) and portrayed Carrie White in the supernatural horror film Carrie (2013). In 2014, Moretz starred in the award-winning drama film Clouds of Sils Maria (2014), the teen romantic drama If I Stay (2014) and the vigilante action film The Equalizer (2014). She also starred in the mystery thriller film Dark Places (2015), the science fiction action film The 5th Wave (2016) and the comedy film Neighbors 2: Sorority Rising (2016).\n\nIn 2016, Moretz announced she was \"re-assessing\" her choice of roles and was dropping out of several projects, including Universal Studios' live-action adaptation of The Little Mermaid. Moretz's following roles include the drama film The Miseducation of Cameron Post (2018), Neil Jordan's drama thriller film Greta (2018), the action horror film Shadow in the Cloud (2020) and the science fiction film Mother/Android (2021).\n\nShe voiced Wednesday Addams in The Addams Family (2019) and The Addams Family 2 (2021).\n\nMoretz's stage work includes her starring role in the original off-Broadway production of The Library (2014) at The Public Theater in New York City.",
+        "birthday": "1997-02-10",
         "name": "Chloë Grace Moretz",
+        "place_of_birth": "Atlanta, Georgia, USA",
         "popularity": 90.83,
         "profile_path": "/u08QwcFnJpMtsDEYSlbUkMuE7bP.jpg"
     },
@@ -1242,7 +1293,10 @@ const actors= [
             }
         ],
         "known_for_department": "Acting",
+        "biography": "Jason Statham is an English actor and martial artist, known for his roles in the Guy Ritchie crime films Lock, Stock and Two Smoking Barrels; Revolver; and Snatch. Statham appeared in supporting roles in several American films, such as The Italian Job, as well as playing the lead role in The Transporter, Crank, The Bank Job, War (opposite martial arts star Jet Li), and Death Race. Statham solidified his status as an action hero by appearing alongside established action film actors Sylvester Stallone, Arnold Schwarzenegger, Bruce Willis, Jet Li and Dolph Lundgren in The Expendables. He normally performs his own fight scenes and stunts.",
+        "birthday": "1967-07-26",
         "name": "Jason Statham",
+        "place_of_birth": "Shirebrook, Derbyshire, England, UK",
         "popularity": 90.811,
         "profile_path": "/lldeQ91GwIVff43JBrpdbAAeYWj.jpg"
     },
@@ -1317,6 +1371,9 @@ const actors= [
         ],
         "known_for_department": "Acting",
         "name": "Millie Bobby Brown",
+        "biography": "Millie Bobby Brown (born 19 February 2004) is a British actress and producer. She gained recognition for playing Eleven in the Netflix science fiction series Stranger Things (2016–present), for which she received nominations for two Primetime Emmy Awards. Brown has starred in the adventure film Godzilla: King of the Monsters (2019) and its sequel Godzilla vs. Kong (2021). She also starred in and produced the Netflix mystery film Enola Holmes (2020) and its 2022 sequel.\n\nIn 2018, Brown was featured in the Time 100 list of the world's most influential people, and was appointed as a UNICEF Goodwill Ambassador, the then youngest person selected for this position.",
+        "birthday": "2004-02-19",
+        "place_of_birth": "Marbella, Málaga, Andalusia, Spain",
         "popularity": 90.742,
         "profile_path": "/2685xGmq68G6tmnUbfgSR6rywEV.jpg"
     },
@@ -1385,6 +1442,9 @@ const actors= [
         ],
         "known_for_department": "Acting",
         "name": "Jennifer Connelly",
+        "biography": "Jennifer Lynn Connelly (born December 12, 1970) is an American actress. She began her career as a child model before making her acting debut in the 1984 crime film Once Upon a Time in America. After having worked as a model for several years, she began to concentrate on acting, starring in a variety of films including the horror film Phenomena (1985), the musical fantasy film Labyrinth (1986), the romantic comedy Career Opportunities (1991), and the period superhero film The Rocketeer (1991). She received praise for her performance in the science fiction film Dark City (1998) and playing a drug addict in Darren Aronofsky's drama film Requiem for a Dream (2000).\n\nIn 2002, Connelly won the Academy Award for Best Supporting Actress for her portrayal of Alicia Nash in Ron Howard's biopic A Beautiful Mind (2001). Her subsequent films include the superhero film Hulk (2003), the horror film Dark Water (2005), the psychological drama Little Children (2006), the drama film Blood Diamond (2006), the science fiction film The Day the Earth Stood Still (2008), the romantic comedy He's Just Not That Into You (2009), and the biopic Creation (2009). In the subsequent decades, she took on supporting roles in Aronofsky's biblical epic film Noah (2014) and in the action films Alita: Battle Angel (2019) and Top Gun: Maverick (2022). Since 2020, she has starred in the TNT dystopian television series Snowpiercer.\n\nConnelly was named Amnesty International Ambassador for Human Rights Education in 2005. She has been the face of Balenciaga and Louis Vuitton fashion advertisements, as well as for Revlon cosmetics. In 2012, she was named the first global face of the Shiseido Company. Magazines, including Time, Vanity Fair, and Esquire, as well as the Los Angeles Times newspaper, have included her on their lists of the world's most beautiful women.\n\nDescription above from the Wikipedia article Jennifer Connelly, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+        "birthday": "1970-12-12",
+        "place_of_birth": "Cairo, New York, USA",
         "popularity": 88.827,
         "profile_path": "/opBts8lC3ZhK4BQwl8ztczehsFQ.jpg"
     }

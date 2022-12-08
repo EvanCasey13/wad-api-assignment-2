@@ -36,6 +36,8 @@ app.use('/api/genres', genresRouter);
 
 app.use('/api/actors', passport.authenticate('jwt', {session: false}), actorsRouter);
 
+app.use('/api/actors/:id', passport.authenticate('jwt', {session: false}), actorsRouter);
+
 app.use('/api/users', usersRouter);
 
 app.use(errHandler);
