@@ -10,7 +10,6 @@ import Spinner from '../components/spinner';
 import SiteHeader from './../components/siteHeader'
 
 const SearchActorPage = (props) => {
-  const { user } = useContext(AuthContext);
 
   const [searchTerm, setSearchTerm] = useState("")
   const debouncedSearchTerm = useDebounce(searchTerm, 1000);
@@ -34,10 +33,6 @@ const SearchActorPage = (props) => {
   const favorites = actors?.filter(a => a?.favorite)
   localStorage.setItem('favorites', JSON.stringify(favorites))
   const addToFavorites = (actorId) => true 
-  
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
 
   return (
     <div className="actors">

@@ -11,8 +11,6 @@ import SiteHeader from './../components/siteHeader'
 
 const UpcomingMoviesPage = (props) => {
 
-  const { user } = useContext(AuthContext);
-
   const [activePage, setActivePage] = useState(1);
 
   const handleChange = (event, value) => {
@@ -36,10 +34,6 @@ const UpcomingMoviesPage = (props) => {
   localStorage.setItem('mustwatch', JSON.stringify(mustwatch))
   const addToMustWatch = (movieId) => true 
   console.log(mustwatch)
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
 
   return (
     <div className="upcomingpage">

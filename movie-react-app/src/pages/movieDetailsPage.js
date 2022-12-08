@@ -10,7 +10,6 @@ import Spinner from '../components/spinner'
 import SiteHeader from './../components/siteHeader'
 
 const MoviePage = (props) => {
-  const { user } = useContext(AuthContext);
   const { id } = useParams();
   const { data: movie, error, isLoading, isError } = useQuery(
     ["movie", { id: id }],
@@ -24,10 +23,6 @@ const MoviePage = (props) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
 
   return (
     <>

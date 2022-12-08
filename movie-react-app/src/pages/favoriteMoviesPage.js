@@ -12,8 +12,6 @@ import SiteHeader from './../components/siteHeader'
 
 const FavoriteMoviesPage = () => {
 
-  const { user } = useContext(AuthContext);
-
   const {favorites: movieIds } = useContext(MoviesContext);
 
   // Create an array of queries and run in parallel.
@@ -38,10 +36,6 @@ const FavoriteMoviesPage = () => {
   });
 
   const toDo = () => true;
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
 
   return (
     <div>

@@ -1,58 +1,43 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import Card from '@mui/material/Card';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import "./Login.css";
-function Login() {
-  const [email, setEmail] = useState("");
+import React, { useContext, useState } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { AuthContext } from '../../AuthContext';
+import { Link } from "react-router-dom";
+
+const Login = props => {
+  const context = useContext(AuthContext);
+
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [user, loading, error] = useAuthState(auth);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (loading) {
-      // maybe trigger a loading screen
-      return;
-    }
-    if (user) navigate("/");
-  }, [user, loading]);
+
+  const login = () => {
+    context.authenticate(userName, password);
+  };
+
+  let location = useLocation();
+
+  // Set 'from' to path where browser is redirected after a successful login - either / or the protected path user requested
+  const { from } = location.state ? { from: location.state.from.pathname } : { from: "/" };
+
+  if (context.isAuthenticated === true) {
+    return <Navigate to={from} />;
+  }
+
   return (
-    <div className="login">
-      <Card sx={{ maxWidth: 345 }}>
-        <Typography gutterBottom variant="h5" component="div" className="cardTitle">
-          TMDB Client
-        </Typography>
-        <form className="form">
-          <TextField type="text"
-            className="login__textBox"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email Address" id="standard-basic" label="Email address" variant="standard" />
-          <br />
-          <TextField type="password"
-            className="login__textBox"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password" id="standard-basic" label="Password" variant="standard" />
-          <br />
-          <Button className="login__btn"
-            onClick={() => logInWithEmailAndPassword(email, password)} variant="outlined">Login</Button>
-          <br />
-          <Button className="login__btn login__google" onClick={signInWithGoogle} variant="outlined">Login with Google</Button>
-          <br />
-          <Typography variant="p" color="text.secondary" className="forgotPassword">
-            <Link to="/reset">Forgot Password</Link>
-          </Typography>
-          <br />
-          <Typography variant="p" color="text.secondary">
-            Don't have an account? <Link to="/register">Register</Link> now.
-          </Typography>
-        </form>
-      </Card>
-    </div>
+    <>
+      <h2>Login page</h2>
+      <p>You must log in to view the protected pages </p>
+      <input id="username" placeholder="user name" onChange={e => {
+        setUserName(e.target.value);
+      }}></input><br />
+      <input id="password" type="password" placeholder="password" onChange={e => {
+        setPassword(e.target.value);
+      }}></input><br />
+      {/* Login web form  */}
+      <button onClick={login}>Log in</button>
+      <p>Not Registered?
+      <Link to="/signup">Sign Up!</Link></p>
+    </>
   );
-}
+};
+
 export default Login;

@@ -19,8 +19,11 @@ import AddMovieReviewPage from './pages/addMovieReviewPage'
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { createRoot } from "react-dom/client";
-import { AuthProvider } from "./AuthProvider";
 import MoviesContextProvider from "./contexts/moviesContext";
+
+import AuthProvider from "./AuthContext";
+import AuthHeader from "./authHeader";
+import ProtectedRoutes from "./protectedRoutes";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,9 +40,12 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
     <BrowserRouter>
-    <MoviesContextProvider>
     <AuthProvider>
+    <AuthHeader />
+    <MoviesContextProvider>
     <Routes>
+      
+    <Route element={<ProtectedRoutes />}>
     <Route path="/shows/popular" element={<TvPopularPage />} />
       <Route path="/actors/popular" element={<ActorPopularPage />} />
       <Route path="/actors/:id" element={<ActorPage />} />
@@ -52,14 +58,17 @@ const App = () => {
       <Route path="/movies/search" element={<SearchMoviePage />} />
       <Route path="/shows/search" element={<SearchShowPage />} />
       <Route path="/actors/search" element={<SearchActorPage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="*" element={ <Navigate to="/" /> } />
+      </Route>
+      
       <Route path="/login" element={<Login />} />
       <Route exact path="/register" element={<Register />} />
       <Route exact path="/reset" element={<Reset />} />
-      <Route path="/" element={<HomePage />} />
-      <Route path="*" element={ <Navigate to="/" /> } />
+
     </Routes>
-    </AuthProvider>
     </MoviesContextProvider>
+    </AuthProvider>
   </BrowserRouter>
   <ReactQueryDevtools initialIsOpen={false} />
   </QueryClientProvider>

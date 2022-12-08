@@ -10,7 +10,6 @@ import useDebounce from "../hooks/useDebounce"
 import SiteHeader from './../components/siteHeader'
 
 const SearchTVShowPage = (props) => {
-  const { user } = useContext(AuthContext);
 
   const [searchTerm, setSearchTerm] = useState("")
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
@@ -34,10 +33,6 @@ const SearchTVShowPage = (props) => {
   const favorites = shows?.filter(s => s?.favorite)
   localStorage.setItem('favorites', JSON.stringify(favorites))
   const addToFavorites = (showId) => true 
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
   
   return (
     <div className="shows">

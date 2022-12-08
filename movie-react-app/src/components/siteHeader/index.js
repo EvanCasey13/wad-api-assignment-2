@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -15,11 +15,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { auth, db, logout } from "../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import Fade from '@mui/material/Fade';
-import Link from '@mui/material/Link';
+import { AuthContext } from "../../AuthContext";
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 const SiteHeader = ( ) => {
+  const context = useContext(AuthContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -51,7 +52,7 @@ const SiteHeader = ( ) => {
     { label: "Actors", path: "/actors/popular" },
     { label: "Register", path: "/register" },
     { label: "Login", path: "/login" },
-    { label: user?.email }  ];
+    { label: context.userName }  ];
 
     const searchSubMenuOptions = [
       { label: "Movies", path: "movies/search" },
@@ -72,6 +73,7 @@ const SiteHeader = ( ) => {
   };
 
   return (
+    
     <>
       <AppBar position="fixed" color="secondary">
         <Toolbar>
@@ -122,7 +124,7 @@ const SiteHeader = ( ) => {
               <>
                   <Button
                   color="inherit"
-                  onClick={logout}
+                  onClick={() => context.signout()}
                   >
                     Logout
                     

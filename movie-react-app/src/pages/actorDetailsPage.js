@@ -9,7 +9,6 @@ import Spinner from '../components/spinner'
 import SiteHeader from './../components/siteHeader'
 
 const ActorPage = (props) => {
-  const { user } = useContext(AuthContext);
   const { id } = useParams();
   const { data: actor, error, isLoading, isError } = useQuery(
     ["actor", { id: id }],
@@ -23,10 +22,6 @@ const ActorPage = (props) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
 
   return (
     <>

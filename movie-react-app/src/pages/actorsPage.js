@@ -10,8 +10,6 @@ import SiteHeader from './../components/siteHeader'
 
 const ActorPopularPage = (props) => {
 
-  const { user } = useContext(AuthContext);
-
   const [activePage, setActivePage] = useState(1);
 
   const handleChange = (event, value) => {
@@ -34,10 +32,6 @@ const ActorPopularPage = (props) => {
   const favorites = actors.filter(a => a.favorite)
   localStorage.setItem('favorites', JSON.stringify(favorites))
   const addToFavorites = (actorId) => true 
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
   
   return (
     <div className="actorpage">

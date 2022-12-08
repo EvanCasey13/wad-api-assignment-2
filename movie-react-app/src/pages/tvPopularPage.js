@@ -10,8 +10,6 @@ import SiteHeader from './../components/siteHeader'
 
 const TvPopularPage = (props) => {
 
-  const { user } = useContext(AuthContext);
-
   const [activePage, setActivePage] = useState(1);
 
   const handleChange = (event, value) => {
@@ -34,10 +32,6 @@ const TvPopularPage = (props) => {
   const favorites = shows.filter(s => s.favorite)
   localStorage.setItem('favorites', JSON.stringify(favorites))
   const addToFavorites = (showId) => true 
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
   
   return (
     <div className="tvpopularpage">

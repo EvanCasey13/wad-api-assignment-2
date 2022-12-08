@@ -11,8 +11,6 @@ import SiteHeader from './../components/siteHeader'
 
 const WriteReviewPage = (props) => {
 
-  const { user } = useContext(AuthContext);
-
   const location = useLocation();
   const movieId = location.state.movieId;
 
@@ -28,10 +26,6 @@ const WriteReviewPage = (props) => {
   if (isError) {
     return <h1>{error.message}</h1>;
   }
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
 
   return (
     <div><SiteHeader />

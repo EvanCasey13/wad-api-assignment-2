@@ -10,8 +10,6 @@ import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 import SiteHeader from './../components/siteHeader'
 
 const HomePage = (props) => {
-
-  const { user } = useContext(AuthContext);
   
   const [activePage, setActivePage] = useState(1);
 
@@ -35,10 +33,6 @@ const HomePage = (props) => {
   const favorites = movies.filter(m => m.favorite)
   localStorage.setItem('favorites', JSON.stringify(favorites))
   const addToFavorites = (movieId) => true 
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
   
   return (
     <div className="homepage">

@@ -11,7 +11,6 @@ import useDebounce from "../hooks/useDebounce"
 import SiteHeader from './../components/siteHeader'
 
 const SearchMoviePage = (props) => {
-  const { user } = useContext(AuthContext);
 
   const [searchTerm, setSearchTerm] = useState("")
   const debouncedSearchTerm = useDebounce(searchTerm, 1000);
@@ -35,10 +34,6 @@ const SearchMoviePage = (props) => {
   const favorites = movies?.filter(m => m?.favorite)
   localStorage.setItem('favorites', JSON.stringify(favorites))
   const addToFavorites = (movieId) => true 
-
-  if (!user) {
-    return <Navigate replace to="/login" />;
-}
   
   return (
     <div className="movies">
