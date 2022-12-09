@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Movie from "../movieCard";
+import Movie from "../upcomingMovieCard";
 import Grid from "@mui/material/Grid";
 import { UpcomingMoviesContext } from "../../upcomingMoviesContext";
 

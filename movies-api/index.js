@@ -46,6 +46,8 @@ app.use('/api/shows/:id', passport.authenticate('jwt', {session: false}), showsR
 
 app.use('/api/upcoming', passport.authenticate('jwt', {session: false}), upcomingMoviesRouter);
 
+app.use('/api/upcoming/:id', passport.authenticate('jwt', {session: false}), upcomingMoviesRouter);
+
 app.use('/api/users', usersRouter);
 
 app.use(errHandler);

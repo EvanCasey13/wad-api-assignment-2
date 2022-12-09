@@ -5,6 +5,7 @@ import MoviePage from "./pages/movieDetailsPage";
 import FavoriteMoviesPage from "./pages/favoriteMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
+import UpcomingMovieDetail from "./pages/upcomingMoviesDetailsPage";
 import ShowPage from "./pages/tvDetailsPage";
 import ActorPage from "./pages/actorDetailsPage";
 import TvPopularPage from "./pages/tvPopularPage";
@@ -59,6 +60,7 @@ const App = () => {
       <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
       <Route path="/movies/favorites" element={<FavoriteMoviesPage />} />
       <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
+      <Route path="/movies/upcoming/:id" element={<UpcomingMovieDetail />} />
       <Route path="/movies/:id" element={<MoviePage />} />
       <Route path="/movies/search" element={<SearchMoviePage />} />
       <Route path="/shows/search" element={<SearchShowPage />} />

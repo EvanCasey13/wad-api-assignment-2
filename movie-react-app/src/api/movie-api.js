@@ -136,3 +136,19 @@ export const getMovies = () => {
         console.log(error);
     });
   };
+
+  export const getUpcomingMovie = (args) => {
+    const [, idPart] = args.queryKey;
+    const { id } = idPart;
+    return fetch(
+        `/api/upcoming/${id}`, {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };
