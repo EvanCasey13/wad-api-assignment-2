@@ -122,3 +122,17 @@ export const getMovies = () => {
         console.log(error);
     });
   };
+
+  export const getUpcomingMovies = () => {
+    return fetch(
+       '/api/upcoming', {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };

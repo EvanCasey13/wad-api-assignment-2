@@ -1,39 +1,27 @@
 import React, { useState, useContext } from "react";
-import AuthContext from "../AuthContext";
-import { Navigate } from 'react-router-dom';
-import { getUpcomingMovies } from "../api/tmdb-api";
-import PageTemplate from '../components/templateMovieListPage';
-import { useQuery } from 'react-query';
-import Spinner from '../components/spinner';
-import Pagination from '@mui/material/Pagination';
+import { UpcomingMoviesContext } from "../upcomingMoviesContext"
+import PageTemplate from '../components/templateUpcomingMovieListPage';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 import SiteHeader from './../components/siteHeader'
 
 const UpcomingMoviesPage = (props) => {
+  const context = useContext(UpcomingMoviesContext);
+  let movies = "";
 
-  const [activePage, setActivePage] = useState(1);
-
-  const handleChange = (event, value) => {
-    setActivePage(value);
-    console.log(value)
-  };
-
-  const {  data, error, isLoading, isError }  = useQuery(['upcoming', activePage], () => getUpcomingMovies(activePage), { keepPreviousData: true })
-
-  if (isLoading) {
-    return <Spinner />
+  if (context.movies) {
+    movies = (
+      <div>
+        {context.movies.map(movie => { return <>{movie.id},{movie.name}<br /></> })}
+      </div>
+    )
   }
-
-  if (isError) {
-    return <h1>{error.message}</h1>
-  }  
-  const movies = data.results;
-
-  // Redundant, but necessary to avoid app crashing.
-  const mustwatch = movies.filter(m => m.watch)
-  localStorage.setItem('mustwatch', JSON.stringify(mustwatch))
-  const addToMustWatch = (movieId) => true 
-  console.log(mustwatch)
+  else {
+    movies = (
+      <div>
+        Upcoming Movies are loading
+      </div>
+    )
+  }
 
   return (
     <div className="upcomingpage">
@@ -45,17 +33,6 @@ const UpcomingMoviesPage = (props) => {
         return <AddToFavoritesIcon movie={movie} />
       }}
     />
-    <Pagination
-    count="100"
-    variant='outlined'
-    color='primary'
-    shape="rounded"
-    showFirstButton 
-    showLastButton
-    className='pagination'
-    page={activePage}
-    onChange={handleChange}
-  />
   </div>
 );
 

@@ -1,9 +1,10 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import moviesRouter from './api/movies';
+import upcomingMoviesRouter from './api/upcomingmovies';
 import genresRouter from './api/genres';
 import usersRouter from './api/users';
-import actorsRouter from './api/actors'
+import actorsRouter from './api/actors';
 import showsRouter from './api/shows';
 import session from 'express-session';
 import passport from './authenticate';
@@ -42,6 +43,8 @@ app.use('/api/actors/:id', passport.authenticate('jwt', {session: false}), actor
 app.use('/api/shows', passport.authenticate('jwt', {session: false}), showsRouter);
 
 app.use('/api/shows/:id', passport.authenticate('jwt', {session: false}), showsRouter);
+
+app.use('/api/upcoming', passport.authenticate('jwt', {session: false}), upcomingMoviesRouter);
 
 app.use('/api/users', usersRouter);
 

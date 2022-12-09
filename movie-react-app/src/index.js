@@ -25,6 +25,7 @@ import AuthProvider from "./AuthContext";
 import ActorProvider from "./actorsContext";
 import ShowProvider from "./showsContext";
 import MovieProvider from "./moviesContext";
+import UpcomingMovieProvider from "./upcomingMoviesContext";
 import ProtectedRoutes from "./protectedRoutes";
 
 const queryClient = new QueryClient({
@@ -47,6 +48,7 @@ const App = () => {
     <MovieProvider>
     <ActorProvider>
     <ShowProvider>
+    <UpcomingMovieProvider>
     <Routes>
     <Route element={<ProtectedRoutes />}>
     <Route path="/shows/popular" element={<TvPopularPage />} />
@@ -70,6 +72,7 @@ const App = () => {
       <Route exact path="/reset" element={<Reset />} />
 
     </Routes>
+    </UpcomingMovieProvider>
     </ShowProvider>
     </ActorProvider>
     </MovieProvider>

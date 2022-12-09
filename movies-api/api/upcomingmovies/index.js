@@ -1,22 +1,22 @@
 import express from 'express';
 import uniqid from 'uniqid'
-import movieModel from './movieModel';
+import upcomingMovieModel from './uMovieModel';
 import asyncHandler from 'express-async-handler';
-import { movies, movieReviews, movieDetails } from './moviesData';
+import { umovies, movieReviews, movieDetails } from './uMoviesData';
 
 const router = express.Router(); 
 
 router.get('/', asyncHandler(async (req, res) => {
-    const movies = await movieModel.find();
-    res.status(200).json(movies);
+    const umovies = await upcomingMovieModel.find();
+    res.status(200).json(umovies);
 }));
 
 // Get movie details
 router.get('/:id', asyncHandler(async (req, res) => {
     const id = parseInt(req.params.id);
-    const movie = await movieModel.findByMovieDBId(id);
-    if (movie) {
-        res.status(200).json(movie);
+    const umovie = await upcomingMovieModel.findByUMovieDBId(id);
+    if (umovie) {
+        res.status(200).json(umovie);
     } else {
         res.status(404).json({message: 'The resource you requested could not be found.', status_code: 404});
     }
