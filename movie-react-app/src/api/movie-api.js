@@ -18,6 +18,30 @@ export const signup = (username, password) => {
     }).then(res => res.json())
 };
 
+export const addFavouriteMovie = (username, movie) => {
+    return fetch(`/api/users/${username}/favourites`, {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        method: 'post',
+        body: JSON.stringify({ movie })
+    }).then(res => res.json())
+};
+
+export const getFavouriteMovies = (username) => {
+    return fetch(
+        `/api/users/${username}/favourites`, {
+            headers: {
+                'Authorization': window.localStorage.getItem('token')
+            }
+        }
+    ).then(res => {
+        return res.json();
+    }).catch((error) => {
+        console.log(error);
+    });
+  };
+
 export const getMovies = () => {
     return fetch(
        '/api/movies', {
