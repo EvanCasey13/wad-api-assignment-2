@@ -26,6 +26,7 @@ import AuthProvider from "./AuthContext";
 import ActorProvider from "./actorsContext";
 import ShowProvider from "./showsContext";
 import MovieProvider from "./moviesContext";
+import FavouriteProvider from "./favouritesContext";
 import UpcomingMovieProvider from "./upcomingMoviesContext";
 import ProtectedRoutes from "./protectedRoutes";
 
@@ -50,6 +51,7 @@ const App = () => {
     <ActorProvider>
     <ShowProvider>
     <UpcomingMovieProvider>
+    <FavouriteProvider>
     <Routes>
     <Route element={<ProtectedRoutes />}>
     <Route path="/shows/popular" element={<TvPopularPage />} />
@@ -74,6 +76,7 @@ const App = () => {
       <Route exact path="/reset" element={<Reset />} />
 
     </Routes>
+    </FavouriteProvider>
     </UpcomingMovieProvider>
     </ShowProvider>
     </ActorProvider>
