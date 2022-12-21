@@ -9,7 +9,7 @@ const ReviewSchema = new Schema({
     updated_at: { type: String, required: true },
     movie_id: {type: Number, required: true},
     rating: {type: Number, required: true},
-    id: { type: String, required: true, unique: true },
+    id: { type: Number, required: true, unique: true },
 });
 
 export default mongoose.model('Reviews', ReviewSchema);
