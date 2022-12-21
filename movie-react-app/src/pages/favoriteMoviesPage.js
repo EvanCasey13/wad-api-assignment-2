@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import { Navigate } from 'react-router-dom';
+import React, { useContext } from "react";
 import PageTemplate from "../components/templateFavouriteListPage";
 import { FavouritesContext } from "../favouritesContext"; 
 import RemoveFromFavorites from "../components/cardIcons/removeFromFavorites";
@@ -12,7 +11,7 @@ const FavoriteMoviesPage = () => {
   let favourites = "";
   
   context.favourites?.map(movie => { return <>{movie}, {movie.id}<br /></> })
-  
+
   return (
     <div>
     <SiteHeader />

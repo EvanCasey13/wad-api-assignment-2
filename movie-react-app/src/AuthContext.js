@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState, useReducer, useContext } from "react";
-import { login, signup, addFavouriteMovie, getFavouriteMovies} from "./api/movie-api";
+import React, { createContext, useState } from "react";
+import { login, signup, addFavouriteMovie, removeFavouriteMovie} from "./api/movie-api";
 
 export const AuthContext = createContext(null);
 
@@ -35,6 +35,11 @@ const AuthContextProvider = (props) => {
     return (result.code == 200) ? true : false;
   };
 
+  const removeFavourite = async (username, movie) => {
+    const result = await removeFavouriteMovie(username, movie);
+    return (result.code == 200) ? true : false;
+  };
+
   const signout = () => {
     setTimeout(() => setIsAuthenticated(false), 100);
   }
@@ -47,6 +52,7 @@ const AuthContextProvider = (props) => {
         register,
         signout,
         addFavourite,
+        removeFavourite,
         userName
       }}
     >

@@ -64,6 +64,17 @@ router.post('/:userName/favourites', asyncHandler(async (req, res) => {
   res.status(201).json(user); 
 }));
 
+//Remove favourite
+router.delete('/:userName/favourites', asyncHandler(async (req, res) => {
+  const newFavourite = req.body.movie;
+  const userName = req.params.userName;
+  const movie = await movieModel.findByMovieDBId(newFavourite);
+  const user = await User.findByUserName(userName);
+  await user.favourites.pull(movie._id);
+  await user.save(); 
+  res.status(201).json(user); 
+}));
+
 router.get('/:userName/favourites', asyncHandler( async (req, res) => {
   const userName = req.params.userName;
   const user = await User.findByUserName(userName).populate('favourites');
