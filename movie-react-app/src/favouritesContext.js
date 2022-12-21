@@ -22,7 +22,7 @@ const FavouritesContextProvider = props => {
     getFavouriteMovies(context.userName).then(result => {
       dispatch({ type: "load", payload: {result}});
     });
-  },[context.isAuthenticated, context.userName, state]);
+  }, [state.movies, context.userName]);
 
   return (
     <FavouritesContext.Provider
