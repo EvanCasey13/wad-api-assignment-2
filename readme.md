@@ -18,14 +18,13 @@ A bullet-point list of the ADDITIONAL features you have implemented in the API *
 ## API Configuration
 
 Describe any configuration that needs to take place before running the API. For example, creating an `.env` file and what variables to put in it. Give an example of how this might be done.
-_____________________
-NODEENV=development
+
+NODE_ENV=development
 PORT=8080
 HOST=localhost
 mongoDB=YourMongoURL
 seedDb=true
 secret=YourJWTSecret
-______________________
 
 ## API Design
 Give an overview of your web API design, perhaps similar to the following: 
