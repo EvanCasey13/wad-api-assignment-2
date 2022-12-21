@@ -11,7 +11,7 @@ const UpcomingMoviesPage = (props) => {
   if (context.movies) {
     movies = (
       <div>
-        {context.movies.map(movie => { return <>{movie.id},{movie.name}<br /></> })}
+        {context.movies.map(movie => { return <>{movie.id},{movie.title}<br /></> })}
       </div>
     )
   }

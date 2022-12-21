@@ -10,7 +10,7 @@ const FavoriteMoviesPage = () => {
   const context = useContext(FavouritesContext);
   let favourites = "";
   
-  context.favourites?.map(movie => { return <>{movie}, {movie.id}<br /></> })
+
 
   return (
     <div>

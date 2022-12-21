@@ -18,6 +18,16 @@ export const signup = (username, password) => {
     }).then(res => res.json())
 };
 
+export const addUserReview = (username, movie, review) => {
+    return fetch(`/api/reviews/${username}/movie/${movie.id}/reviews`, {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        method: 'post',
+        body: JSON.stringify({ author: review.author, review: review.review, rating: review.rating, movie_id: movie.id })
+    }).then(res => res.json())
+};
+
 export const addFavouriteMovie = (username, movie) => {
     return fetch(`/api/users/${username}/favourites`, {
         headers: {

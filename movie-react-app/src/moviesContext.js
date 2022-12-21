@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useReducer, useContext } from "react";
 import { getMovies } from "./api/movie-api";
 import { AuthContext } from './AuthContext';
+import { addReview } from "./api/movie-api";
 
 export const MoviesContext = createContext(null);
 
@@ -24,10 +25,16 @@ const MoviesContextProvider = props => {
     });
   },[context.isAuthenticated]);
 
+  const addReview = async (movie, review) => {
+    const result = await addReview(movie, review);
+    return (result.code == 200) ? true : false;
+  };
+
   return (
     <MoviesContext.Provider
       value={{
-        movies: state.movies
+        movies: state.movies,
+        addReview
       }}
     >
       {props.children}
