@@ -6,6 +6,7 @@ import genresRouter from './api/genres';
 import usersRouter from './api/users';
 import actorsRouter from './api/actors';
 import showsRouter from './api/shows';
+import reviewsRouter from './api/reviews';
 import session from 'express-session';
 import passport from './authenticate';
 import './seedData'
@@ -50,6 +51,8 @@ app.use('/api/upcoming', passport.authenticate('jwt', {session: false}), upcomin
 app.use('/api/upcoming/:id', passport.authenticate('jwt', {session: false}), upcomingMoviesRouter);
 
 app.use('/api/users', usersRouter);
+
+app.use('/api/reviews', reviewsRouter);
 
 app.use(errHandler);
 

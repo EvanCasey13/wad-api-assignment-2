@@ -58,6 +58,7 @@ router.post('/:userName/favourites', asyncHandler(async (req, res) => {
   const user = await User.findByUserName(userName);
   if (user.favourites.includes(movie._id)) {
     res.status(404).json({ code: 404, msg: 'Movie already exists as favourite' });
+    user.favourites.pop(movie._id)
   }
   await user.favourites.push(movie._id);
   await user.save(); 

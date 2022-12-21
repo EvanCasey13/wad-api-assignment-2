@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -10,9 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg'
-import { getGenres } from "../../api/tmdb-api";
-import { useQuery } from "react-query";
-import Spinner from '../spinner'
+import { GenresContext } from "../../genresContext";
 
 const formControl =
 {
@@ -23,19 +21,7 @@ const formControl =
 
 export default function FilterMoviesCard(props) {
 
-  const { data, error, isLoading, isError } = useQuery("genres", getGenres);
-
-  if (isLoading) {
-    return <Spinner />;
-  }
-
-  if (isError) {
-    return <h1>{error.message}</h1>;
-  }
-  const genres = data.genres;
-  if (genres[0].name !== "All"){
-    genres.unshift({ id: "0", name: "All" });
-  }
+  const context = useContext(GenresContext);
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
@@ -77,10 +63,10 @@ export default function FilterMoviesCard(props) {
             labelId="genre-label"
             id="genre-select"
             defaultValue=""
-            value={props.genreFilter}
+            value="12"
             onChange={handleGenreChange}
           >
-            {genres.map((genre) => {
+            {context.genres.map(genre => {
               return (
                 <MenuItem key={genre.id} value={genre.id}>
                   {genre.name}

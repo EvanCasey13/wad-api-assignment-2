@@ -9,6 +9,8 @@ import { MoviesContext } from "../../contexts/moviesContext";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from '../../AuthContext';
+import { addUserReview } from "../../api/movie-api";
 
 const ratings = [
   {
@@ -62,12 +64,13 @@ const styles = {
 
 const ReviewForm = ({ movie }) => {
   const context = useContext(MoviesContext);
+  const authContext = useContext(AuthContext);
   const [rating, setRating] = useState(3);
   const [open, setOpen] = useState(false); 
   const navigate = useNavigate();
 
   const defaultValues = {
-    author: "",
+    author: authContext.userName,
     review: "",
     agree: false,
     rating: "3",
@@ -90,10 +93,11 @@ const ReviewForm = ({ movie }) => {
   };
 
   const onSubmit = (review) => {
-    review.movieId = movie.id;
+    review.author = authContext.userName;
+    review.movie_id = movie.id;
     review.rating = rating;
     // console.log(review);
-    context.addReview(movie, review);
+    addUserReview(authContext.userName, movie, review);
     setOpen(true); // NEW
   };
 
